@@ -3,15 +3,14 @@ layout: default
 ---
 
 <div class="container">
-
   {% bookshop page-heading title=page.title description=page.subtitle %}
   {% assign page_image = site.baseurl | append: page.image %}
   {% bookshop page-image image=page_image %}
-
+  
   <div class="page animate">
     {{ content }}
   </div>
-
+  
   {% if page.previous.url %}
   <div class="project__navigation animate">
     <a class="project__prev" href="{{page.previous.url}}">
@@ -22,7 +21,6 @@ layout: default
     </a>
   </div>
   {% endif %}
-
 </div>
 
 {% bookshop

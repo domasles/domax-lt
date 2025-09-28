@@ -4,6 +4,11 @@
 .dockerignore
 Dockerfile
 
+# Dependency directories
+vendor
+node_modules
+bookshop-live.js
+
 # Information files
 README.md
 LICENSE

@@ -1,10 +1,8 @@
-<!-- begin blog -->
 <section class="section blog">
   <div class="container">
     <div class="row">
       <div class="col col-12">
         <div class="contaniner__inner animate">
-
           <div class="section__info">
             <div class="section__head">
               <h2 class="section__title">{{ include.title }}</h2>
@@ -14,18 +12,16 @@
           </div>
 
           {% if include.show_posts %}
-          <div class="row">
-            {% if site.posts.size > 0 %}
-              {% for post in site.posts offset:0 limit:3 %}
-                {% bookshop blog-card post=post %}
-              {% endfor %}
-            {% endif %}
-          </div>
+            <div class="row">
+              {% if site.posts.size > 0 %}
+                {% for post in site.posts offset:0 limit:3 %}
+                  {% bookshop blog-card post=post %}
+                {% endfor %}
+              {% endif %}
+            </div>
           {% endif %}
-
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- end blog -->
