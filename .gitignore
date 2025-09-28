@@ -1,10 +1,19 @@
+# Build output
 _site
+
+# Cache files
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+
+# Dependency directories
 vendor
 node_modules
 bookshop-live.js
+
+# OS generated files
 .DS_Store
+
+# Bundler config
 site/.bundle
 .bundle
