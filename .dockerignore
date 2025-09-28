@@ -1,0 +1,9 @@
+# Development files
+.git/
+.gitignore
+.dockerignore
+Dockerfile
+
+# Information files
+README.md
+LICENSE
