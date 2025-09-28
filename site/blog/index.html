@@ -1,0 +1,25 @@
+---
+layout: default
+title: Blog
+pagination:
+  enabled: true
+---
+
+<div class="container">
+  <div class="c-page-heading">
+    <h1 class="c-page-heading__title">Blog</h1>
+    <p class="c-page-heading__description">My personal blog, consisting of articles about web development, programming, technology, or anything else I might find interesting and want to share!</p>
+  </div>
+</div>
+
+<div class="container animate">
+  <div class="row">
+    {% for post in paginator.posts %}
+      {% bookshop blog-card post=post %}
+    {% endfor %}
+  </div>
+</div>
+
+{% if paginator.total_pages > 1 %}
+  {% bookshop_include pagination %}
+{% endif %}

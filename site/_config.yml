@@ -4,9 +4,8 @@ plugins:
   - jekyll-bookshop
   - jekyll-sitemap
   - jekyll/tagging
+  - jekyll-paginate-v2
 
-# Multiple bookshops can be used on one website,
-# or different production / staging locations.
 bookshop_locations:
   - ../component-library
 
@@ -14,8 +13,13 @@ exclude:
   - postcss.config.js
   - node_modules
 
-include:
-  - _cloudcannon
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/blog/page/:num/'
+  title: ':title - Page :num'
+  sort_field: 'date'
+  sort_reverse: true
 
 collections_dir: 'collections'
 
@@ -51,7 +55,6 @@ defaults:
     values:
       layout: post
 
-# Tags
 tag_page_dir: tag
 tag_page_layout: tag_page
 tag_permalink_style: /:title

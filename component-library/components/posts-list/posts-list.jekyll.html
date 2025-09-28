@@ -1,11 +1,19 @@
 {% if include.show_posts %}
   <div class="container animate">
-    <div class="row" data-pagebreak="6">
-      {% for post in site.posts %}
-        {% bookshop blog-card post=post %}
-      {% endfor %}
+    <div class="row">
+      {% if paginator %}
+        {% for post in paginator.posts %}
+          {% bookshop blog-card post=post %}
+        {% endfor %}
+      {% else %}
+        {% for post in site.posts %}
+          {% bookshop blog-card post=post %}
+        {% endfor %}
+      {% endif %}
     </div>
   </div>
 
-  {% bookshop_include pagination %}
+  {% if paginator %}
+    {% bookshop_include pagination %}
+  {% endif %}
 {% endif %}

@@ -1,30 +1,33 @@
-<!-- begin pagination -->
+{% if paginator.total_pages > 1 %}
 <nav class="pagination">
   <div class="container">
     <div class="pagination__inner">
       <div class="pagination__list">
-        {% capture prev_text %}<i class="ion ion-ios-arrow-back"></i> Prev{% endcapture %}
-
-        {% if jekyll.environment != "development" and env_bookshop_live != true %}
-          <a data-pagebreak-control="prev" href="." class="pagination__prev">{{prev_text}}</a>
+        {% if paginator.previous_page %}
+          <a href="{{ paginator.previous_page_path }}" class="pagination__prev">
+            <i class="ion ion-ios-arrow-back"></i> Prev
+          </a>
+        {% else %}
+          <span class="pagination__prev disabled">
+            <i class="ion ion-ios-arrow-back"></i> Prev
+          </span>
         {% endif %}
-
-        <span data-pagebreak-control="!prev" class="pagination__prev disabled">{{prev_text}}</span>
 
         <div class="pagination__count">
-          Page <span data-pagebreak-label="current">1</span>
-          of <span data-pagebreak-label="total">1</span>
+          Page {{ paginator.page }} of {{ paginator.total_pages }}
         </div>
 
-        {% capture next_text %}Next <i class="ion ion-ios-arrow-forward"></i>{% endcapture %}
-
-        {% if jekyll.environment != "development" and env_bookshop_live != true %}
-          <a data-pagebreak-control="next" href="." class="pagination__next">{{next_text}}</a>
+        {% if paginator.next_page %}
+          <a href="{{ paginator.next_page_path }}" class="pagination__next">
+            Next <i class="ion ion-ios-arrow-forward"></i>
+          </a>
+        {% else %}
+          <span class="pagination__next disabled">
+            Next <i class="ion ion-ios-arrow-forward"></i>
+          </span>
         {% endif %}
-
-        <span data-pagebreak-control="!next" class="pagination__next disabled">{{next_text}}</span>
       </div>
     </div>
   </div>
 </nav>
-<!-- end pagination -->
+{% endif %}

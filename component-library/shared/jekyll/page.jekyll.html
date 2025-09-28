@@ -1,9 +1,9 @@
 {% if include.content_blocks.size > 0 %}
-<div class="c-page">
+    <div class="c-page">
 
-{% for block in include.content_blocks %}
-    {% bookshop {{block._bookshop_name}} bind=block %}
-{% endfor %}
+    {% for block in include.content_blocks %}
+        {% bookshop {{block._bookshop_name}} bind=block %}
+    {% endfor %}
 
-</div>
+    </div>
 {% endif %}
