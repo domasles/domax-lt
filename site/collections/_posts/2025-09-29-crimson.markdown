@@ -1,0 +1,204 @@
+---
+title: "Crimson: A 2D Game Engine Built for Learning and Understanding"
+date: 2025-09-29 10:01:00 +0300
+image: '/images/post-5.jpg'
+tags: [CPP, Gamedev, Engine, SDL3, FOSS]
+---
+
+[Crimson](https://github.com/domasles/crimson) is a 2D game engine designed with a clear mission: to provide developers with a powerful yet understandable foundation for learning game development. Unlike many engines that hide complexity behind layers of abstraction, Crimson maintains transparency in its architecture while delivering professional-grade capabilities.
+
+## The Philosophy: Learning Through Transparency
+
+Most game engines today fall into two categories: either they're so simple they're not useful for real projects, or they're so complex that understanding their internals becomes impossible. Crimson takes a different approach - it provides professional features while keeping the architecture clear and educational.
+
+The engine was born from a passion to understand low-level game engine architecture and to provide an open library for the community, requiring no licensing fees and offering true cross-platform compatibility.
+
+## Core Architecture
+
+### Multi-Game Framework
+One of Crimson's unique features is its launcher-based architecture. Instead of building a single game, you build a collection of games that share the same engine:
+
+```
+launcher/
+games/
+├── crimson/          # Built-in game example
+├── outBreak/         # Breakout-style game
+└── your-game/        # Your custom game
+```
+
+Each game is built as a dynamic library, enabling hot-swapping during development for incredibly fast iteration cycles. The launcher automatically discovers games through JSON manifests and provides a professional game selection interface.
+
+### Component-Based Entity System
+Crimson implements a clean Entity Component System (ECS) pattern:
+
+```cpp
+// Example entity with components
+Entity player = scene.CreateEntity();
+player.AddComponent<TransformComponent>(position, rotation, scale);
+player.AddComponent<TextureComponent>("player_sprite.png");
+player.AddComponent<CollisionComponent>(CollisionShape::Rectangle);
+player.AddComponent<InputComponent>();
+```
+
+This approach promotes composition over inheritance and makes game logic modular and reusable across different game types.
+
+### SDL3-Powered Foundation
+The engine is built on SDL3, providing:
+- **Modern Graphics**: Hardware-accelerated rendering with modern OpenGL support
+- **Cross-Platform Audio**: High-quality audio mixing and playback
+- **Unified Input**: Consistent input handling across all platforms
+- **Window Management**: Multi-monitor support and flexible window controls
+
+## Visual Level Design with LDtk
+
+Crimson integrates seamlessly with [LDtk](https://ldtk.io), a professional level editor that provides visual design tools rivaling commercial engines:
+
+![LDtk Integration](https://ldtk.io/img/screenshots/quickOverview.gif)
+
+### Automatic Integration
+When you place `.ldtk` files in your game's `assets/maps/` directory, Crimson automatically:
+- Loads level layouts and tile arrangements
+- Generates collision boundaries from tilemap data
+- Imports entity placements and properties
+- Handles multi-layer rendering
+
+This workflow allows designers to create complex levels visually while developers focus on game logic.
+
+## Platform Support and Deployment
+
+### Universal Compatibility
+Crimson truly delivers on cross-platform promises:
+- **Windows**: Full Visual Studio integration with native performance
+- **Linux**: GCC support with complete feature parity
+- **macOS**: Native Xcode integration (Arm64 and Intel)
+- **WebAssembly**: Complete web deployment without feature loss
+
+### Modern Build System
+The engine uses modern CMake for build management:
+
+```bash
+# Generate projects for your platform
+./scripts/projects/GenerateProjects
+
+# Build specific games
+cmake --build build-native --target crimson
+cmake --build build-wasm --target outBreak
+
+# Everything builds in parallel with full IDE integration
+```
+
+All dependencies are included as Git submodules, meaning zero external installations are required. Clone the repository and you have everything needed to build games.
+
+## Game Development Workflow
+
+### Rapid Prototyping
+Crimson's hot-swappable architecture enables incredibly fast iteration:
+
+1. Make changes to game code
+2. Rebuild the game library
+3. Launcher automatically reloads the updated game
+4. Test changes immediately without restarting
+
+This workflow is particularly powerful for tweaking gameplay mechanics and balancing.
+
+### Asset Management
+Each game follows a standardized asset structure:
+
+```
+games/your-game/
+├── src/                    # C++ game logic
+├── assets/                 # Auto-loaded content
+│   ├── maps/              # LDtk level files
+│   ├── tilesets/          # Sprite sheets
+│   └── audio/             # Sound effects and music
+├── config/                # JSON configurations
+│   ├── Manifest.json      # Game metadata
+│   └── InputActions.json  # Control bindings
+└── CMakeLists.txt         # Build configuration
+```
+
+Assets and configurations are automatically copied to build outputs and loaded by the engine, eliminating manual resource management.
+
+### Professional Development Tools
+The engine includes comprehensive development support:
+- **VS Code Integration**: Full IntelliSense and debugging support
+- **Visual Studio Support**: Native Windows development experience
+- **Command Line Tools**: Complete CLI workflow for automated builds
+- **WebAssembly Deployment**: One-command web deployment
+
+## Technical Features
+
+### Advanced Collision System
+Crimson provides physics-accurate collision detection with multiple primitive types:
+- Rectangle and circle collision shapes
+- Pixel-perfect collision for complex sprites
+- Automatic collision generation from tilemap data
+- Trigger zones and collision callbacks
+
+### JSON-Driven Configuration
+Everything in Crimson is configurable through JSON:
+- Game metadata and launcher integration
+- Input bindings and control schemes
+- Asset loading paths and configurations
+- Game-specific settings and parameters
+
+This approach makes games highly moddable and enables data-driven development workflows.
+
+### Performance Optimization
+Despite its educational focus, Crimson doesn't compromise on performance:
+- Hardware-accelerated rendering through SDL3
+- Efficient memory management with object pooling
+- Multithreaded asset loading
+- Optimized collision detection algorithms
+
+## Getting Started
+
+### Setup
+Setting up Crimson is straightforward:
+
+```bash
+# Clone with all dependencies
+git clone --recurse-submodules https://github.com/domasles/crimson.git
+cd crimson
+
+# Generate build files
+./scripts/projects/GenerateProjects
+
+# Start developing
+code .  # VS Code opens with full project support
+```
+
+### Creating Your First Game
+Use the built-in game generator:
+
+```bash
+./scripts/projects/GenerateGame my_game "My Awesome Game"
+```
+
+This creates a complete game template with proper structure, build configuration, and example code.
+
+## What's Coming Next
+
+Crimson's roadmap includes several exciting features:
+- **Immediate-Mode GUI**: Built-in UI system for game interfaces and debug tools
+- **Comprehensive Documentation**: API reference and step-by-step tutorials
+- **Multiplayer Foundations**: Networking support for online gameplay
+- **Advanced Rendering**: Shaders, lighting, and post-processing effects
+
+## The Community Aspect
+
+Crimson is designed to be a learning platform for the entire game development community. The codebase serves as a reference implementation of modern game engine architecture, demonstrating:
+- Clean C++ practices and design patterns
+- Cross-platform development techniques
+- Modern build system integration
+- Professional game development workflows
+
+## Conclusion
+
+Crimson represents what game engines could be: powerful, transparent, and educational. By focusing on clarity and understanding rather than hiding complexity, it enables developers to learn game engine architecture while building real projects.
+
+Whether you're a student learning game development, an indie developer who wants more control over your tools, or an experienced programmer curious about engine internals, Crimson provides a solid foundation for exploration and creation.
+
+The engine proves that educational tools don't have to be toys - they can be professional-grade software that empowers developers to understand and build upon solid foundations.
+
+Explore the [source code](https://github.com/domasles/crimson), try the examples, and start building your own games with an engine you can truly understand and modify.
