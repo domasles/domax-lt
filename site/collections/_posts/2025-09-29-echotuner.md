@@ -1,7 +1,7 @@
 ---
 title: "EchoTuner: Building an AI-Powered Playlist Generator That You Own"
 date: 2025-09-29 10:00:00 +0300
-image: '/images/post-5.jpg'
+image: '/images/echotuner.png'
 tags: [JS, AI, Music, Spotify, Docker, FOSS]
 ---
 
@@ -15,7 +15,7 @@ EchoTuner solves this by embracing the "run it yourself" philosophy. Instead of 
 
 ## What Makes EchoTuner Different
 
-![EchoTuner Architecture](https://echotuner-docs.domax.lt/images/architecture.png)
+![EchoTuner Architecture](https://echotuner-docs.domax.lt/posts/api-overview)
 
 ### AI-Powered Analysis
 EchoTuner doesn't just shuffle songs or rely on basic genre matching. It analyzes audio features like:
