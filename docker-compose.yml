@@ -1,0 +1,17 @@
+# DoMax.lt Docker Compose Configuration
+# This configuration uses pre-built images from GitHub Container Registry (GHCR)
+# To use local builds instead, use docker compose up --build
+
+services:
+  website:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+
+    image: ghcr.io/domasles/domax-lt/website:latest
+    container_name: domax-lt
+
+    ports:
+      - "0.0.0.0:80:80"
+
+    restart: unless-stopped
