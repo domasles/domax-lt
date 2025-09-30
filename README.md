@@ -1,173 +1,148 @@
-# DoMax.lt - Personal Portfolio & Blog
+# ![DoMax Logo](DoMaxLogo.png) DoMax.lt - Personal Portfolio & Digital Space
 
-A modern Jekyll-powered website built with Bookshop components and featuring real Jekyll pagination. This is the source code for [domax.lt](https://domax.lt), showcasing projects, blog posts, and professional information for Domas Leščinskas.
-
-## Demo
-
-The live site is available at [domax.lt](https://domax.lt)!
-
-## Project Philosophy
-
-DoMax.lt embraces the "own your tools" philosophy. Instead of relying on heavyweight CMS platforms or third-party hosting services that might change terms or disappear, this project uses:
-
-- **Static Site Generation** - Fast, secure, and reliable Jekyll-based architecture
-- **Component-Based Design** - Modular Bookshop components for maintainable development
-- **Docker Deployment** - Containerized deployment with nginx for production-ready hosting
-- **Complete Control** - Full ownership of content, design, and deployment
+Welcome to my corner of the internet.
 
 This isn't just a website - it's a template for building professional portfolio sites that you control completely.
 
-## Key Features
+Built for developers who believe in owning their digital presence rather than renting it from platforms that come and go.
 
-### Modern Jekyll Architecture
-- **Jekyll 4.3.3** with modern Ruby practices
-- **Bookshop Components** for modular, reusable design elements
-- **Real Jekyll Pagination** using jekyll-paginate-v2 for `/blog/page/x` URLs
-- **SCSS Styling** with component-scoped styles
-- **Responsive Design** that works across all devices
+## Live Demo
 
-### Content Management
-- **Projects Showcase** with detailed project pages and summaries
-- **Blog System** with tagging, pagination, and rich content support
-- **Testimonials** integration for social proof, though not enabled yet in the official website
-- **Contact Forms** and newsletter signup functionality
-- **SEO Optimization** with proper meta tags and sitemap generation
+Experience it yourself at [domax.lt](https://domax.lt) - see how ideas translate into reality.
 
-### Development Experience
-- **Component-Based Architecture** with Bookshop for rapid development
-- **Multi-Stage Docker Build** for optimized production deployment
+## The Philosophy Behind DoMax.lt
 
-### Deployment & Performance
-- **Docker Ready** with nginx serving optimized static files
-- **Multi-Stage Build** separating Ruby, and nginx stages
+In a world of constant platform changes and algorithm tweaks, I believe in digital independence. This project embodies:
 
-## Quick Start
+- **Complete Ownership** - Your content, your design, your rules. No third-party platforms controlling your narrative.
+- **Sustainable Technology** - Built with Jekyll's proven architecture that's been reliably serving sites for over a decade.
+- **Performance First** - Static generation means lightning-fast loading times and rock-solid reliability.
+- **Professional Presentation** - Because your work deserves a platform that matches its quality.
+
+This isn't just my portfolio - it's a philosophy made code. Take it, make it yours, and own your digital presence.
+
+## What Makes This Different
+
+### Crafted for Real Use
+- **Jekyll 4.3.3** with battle-tested reliability
+- **Bookshop Components** for modular design that scales
+- **True Jekyll Pagination** with clean `/blog/page/x` URLs
+- **Responsive Everything** because your audience uses every device imaginable
+
+### Built for Content Creators
+- **Project Showcases** that tell the story behind your work
+- **Blog Platform** with proper tagging and pagination
+- **Portfolio Management** designed for professionals
+- **SEO Ready** because visibility matters
+
+### Developer Experience That Doesn't Suck
+- **Component Architecture** that makes sense
+- **Docker Everything** for consistency across environments
+- **Clean Structure** you can understand and modify
+
+## Getting Started
 
 ### Prerequisites
-- **Docker & Docker Compose** (recommended)
-- **Ruby 3.4+ with Bundler 2.6.9** (for local development)
+Just Docker. That's it. No Ruby installations, no version conflicts, no "works on my machine" problems.
 
-### Docker Deployment (Recommended)
+### Launch Your Site
 
-1. **Clone the repository**:
+1. **Get the code**:
 ```bash
 git clone https://github.com/domasles/domax-lt.git
 cd domax-lt
 ```
 
-2. **Build and run with Docker Compose**:
+2. **Run it**:
 ```bash
-# Build and start the site
 docker compose up --build
-
-# Or run in background
-docker compose up --build -d
 ```
 
-3. **Access the site**:
-- Visit `http://localhost:80` to view the site
-- The site will be served by nginx with production optimizations
+3. **Visit `http://localhost:80`** and see your site running.
 
-### Local Development
+That's it. Seriously.
 
-#### Setup
+### For Local Development
+
+If you prefer working directly with Ruby:
 ```bash
-# Install Ruby dependencies
-bundle install
+# Install dependencies
+bundle install --gemfile=site/Gemfile
+
+# Serve locally
+cd site && bundle exec jekyll serve
 ```
 
-### Build Options
-```bash
-# Docker builds
-docker compose build website
+## Making It Yours
 
-# Local Jekyll build
-BUNDLE_GEMFILE=site/Gemfile JEKYLL_ENV=production bundle exec jekyll build --source site --destination _site
-```
+### Content Management
 
-## Daily Development Workflow
-
-### Adding New Content
-
-#### Blog Posts
-Create new posts in `site/collections/_posts/`:
+#### Adding Blog Posts
+Drop a new file in `site/collections/_posts/`:
 ```markdown
 ---
-title: "Your Post Title"
-date: 2025-09-28 10:00:00 +0300
-image: '/images/post-x.jpg'
-tags: [tag1, tag2, tag3]
+title: "Your Brilliant Thoughts"
+date: 2025-09-30 10:00:00 +0300
+image: '/images/your-image.jpg'
+tags: [relevant, tags, here]
 ---
 
-Your post content here...
+Write something meaningful...
 ```
 
-#### Projects
-Add projects to `site/collections/_projects/`:
+#### Showcasing Projects
+Add to `site/collections/_projects/`:
 ```markdown
 ---
-date: 2025-09-28 10:00:00 +0300
-title: Project Name
-subtitle: Project Type
-image: '/images/project-x.jpg'
+title: Amazing Project
+subtitle: What it does
+image: '/images/project-screenshot.jpg'
 ---
 
-Project description and details...
+Tell the story of what you built and why it matters...
 ```
 
-### Component Development
-Bookshop components are in `component-library/components/`:
-- Each component has `.jekyll.html` for markup and `.scss` for styles
-- Components are automatically detected and available in all pages
+### Customization
 
-### Content Structure
+The beauty of owning your platform is complete customization freedom:
+
+- **Components**: Modify any component in `component-library/components/`
+- **Styling**: Global styles in `component-library/shared/styles/`
+- **Layout**: Page templates in `site/_layouts/`
+- **Data**: Site configuration in `site/_data/`
+
+## How It's Organized
+
+Everything has its place:
+
 ```
 site/
 ├── collections/
 │   ├── _pages/          # Static pages (about, contact, etc.)
-│   ├── _posts/          # Blog posts with pagination
-│   ├── _projects/       # Project showcase items
-│   └── _testimonials/   # Client testimonials
-├── _data/               # Site configuration and navigation
-├── _includes/           # Jekyll includes and partials
-├── _layouts/            # Page layouts
-├── assets/              # Compiled CSS and static assets
-└── images/              # Image assets
+│   ├── _posts/          # Blog posts with automatic pagination
+│   ├── _projects/       # Your portfolio pieces
+│   └── _testimonials/   # Social proof (when you're ready)
+├── _data/               # Site settings and navigation
+├── _layouts/            # Page templates
+└── images/              # All your visual assets
 ```
 
-## Project Structure
-
-### Component Architecture
 ```
 component-library/
-├── components/
-│   ├── blog-card/       # Post preview cards
-│   ├── hero/            # Homepage hero section
-│   ├── projects-list/   # Project showcase
-│   ├── pagination/      # Blog pagination
-│   └── ...              # Other reusable components
-└── shared/
-    ├── jekyll/          # Jekyll-specific includes
-    └── styles/          # Global styles and variables
+├── components/          # Reusable UI pieces
+│   ├── blog-card/       # Post previews
+│   ├── hero/            # Homepage impact
+│   ├── projects-list/   # Portfolio showcase
+│   └── ...              # Everything modular
+└── shared/              # Global styles and utilities
 ```
 
-### Docker Configuration
-```
-docker/
-├── nginx.conf           # Production nginx configuration
-└── entrypoint.sh        # Container startup script
-```
+## Configuration That Makes Sense
 
-The multi-stage Dockerfile:
-1. **Ruby stage**: Installs Jekyll dependencies and builds the site
-2. **nginx stage**: Serves the static site with optimized configuration
-
-## Configuration
-
-### Jekyll Configuration
-Key settings in `site/_config.yml`:
+### Jekyll Setup
+Key bits in `site/_config.yml`:
 ```yaml
-# Pagination
+# Pagination that actually works
 pagination:
   enabled: true
   per_page: 6
@@ -195,94 +170,60 @@ collections:
     permalink: /blog/:slug
 ```
 
-### Docker Configuration
-Environment variables and settings:
-- **Port**: Site runs on port 80 by default (for easy http access)
-- **nginx**: Optimized for static file serving with proper headers
-- **Build**: Multi-stage build for minimal production image size
+### Docker Magic
+The multi-stage build:
+1. **Ruby environment** builds your Jekyll site
+2. **nginx stage** serves it blazingly fast
+
+All configured for production from day one.
 
 ## Deployment Options
 
-### Production Deployment
+### Production Ready
 ```bash
-# Build production images
-docker compose build
+# Build for production
+docker compose up
 ```
 
-## Best Practices of taking DoMax.lt as a template and extending upon its features
-
-### Content Creation
-- **Use descriptive filenames** with dates for posts and projects
-- **Optimize images** before adding to the images directory
-- **Write semantic HTML** in component templates
-- **Follow component patterns** established in existing components
-
-### Performance
-- **Minimize component complexity** for faster build times
-- **Use appropriate image sizes** and formats
-- **Cache static assets** through nginx configuration
-- **Enable compression** for better loading times
-
-### Development Workflow
-1. **Create feature branches** for significant changes
-2. **Test locally** before building Docker images
-3. **Use component isolation** with Bookshop browser for UI development
-4. **Validate markup** and accessibility
+The nginx configuration is already optimized for:
+- Static file serving
+- Proper caching headers
+- Security headers
+- GZIP compression
 
 ## Troubleshooting
 
-### Common Issues
-
-**Docker build issues**:
+**Build not working?**
 ```bash
-# Clean build without cache
-docker compose build --no-cache domax-site
+# Nuclear option - clean rebuild
+docker compose build --no-cache
 ```
 
-**Pagination not working**:
-- Ensure jekyll-paginate-v2 is installed
-- Check that blog index page has `pagination: enabled: true`
-- Verify pagination configuration in `_config.yml`
+**Pagination acting up?**
+- Check that jekyll-paginate is in your Gemfile
+- Verify pagination settings in `_config.yml`
+- Make sure your blog index page is properly configured
 
-### Performance Tips
-- **Use Docker for consistency** across development and production
-- **Build specific components** instead of everything when possible
-- **Enable parallel builds** where supported
-- **Monitor build times** and optimize slow components
+**Want to understand what's happening?**
+Look at the Dockerfile - it's commented and straightforward.
 
-## Contributing
+## Technical Foundation
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes following existing patterns
-4. Test locally and with Docker
-5. Submit a pull request
+**Built With:**
+- **Jekyll 4.3.3** - The static site generator that just works
+- **Bookshop** - Component architecture for maintainable development  
+- **SCSS** - Styling that scales with your ambitions
+- **Docker** - Consistent environments everywhere
+- **nginx** - Production-grade web serving
+
+**Philosophy:** Use proven technologies, avoid complexity, own your platform.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Dependencies & Technology
-
-### Core Technologies
-- **[Jekyll 4.3.3](https://jekyllrb.com/)** - Static site generation
-- **[Bookshop](https://github.com/CloudCannon/bookshop)** - Component-based Jekyll development
-- **[jekyll-paginate-v2](https://github.com/sverrirs/jekyll-paginate-v2)** - Advanced pagination
-- **[SCSS](https://sass-lang.com/)** - CSS preprocessing with component scoping
-
-### Build & Deployment
-- **[Docker](https://www.docker.com/)** - Containerized deployment
-- **[nginx](https://nginx.org/)** - Production web server
-
-### Development Tools
-- **[Ruby 3.1](https://www.ruby-lang.org/)** - Jekyll runtime
-- **[Bundler](https://bundler.io/)** - Ruby dependency management
-- **Modern Build Pipeline** - Multi-stage Docker builds for optimization
-
-**Zero Installation Required**: With Docker, all dependencies are handled automatically.
+MIT License - Use it, modify it, make it yours. See [LICENSE](LICENSE) for the fine print.
 
 ---
 
-**Built with passion for clean code, modern web development and sharing experience through Open Source. Professional portfolio that you own completely.**
+*Built for developers who believe in digital independence and owning their professional presence.*
 
-*Ready to showcase your work? Clone, customize, and deploy your own professional presence!*
+**Ready to take control of your digital narrative? Clone it, customize it, and make it uniquely yours.**
