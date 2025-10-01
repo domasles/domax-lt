@@ -1,4 +1,3 @@
-/* Posts List */
 .article {
   margin-bottom: 20px;
   will-change: transform;
@@ -173,5 +172,11 @@
   .article__date {
     font-size: 12px;
     line-height: 14px;
+  }
+
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
