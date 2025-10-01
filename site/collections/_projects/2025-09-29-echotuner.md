@@ -8,6 +8,7 @@ image: '/images/echotuner.png'
 EchoTuner is an open-source, AI-powered playlist generation platform designed for music enthusiasts who want complete control over their Spotify experience. Built with the "run it yourself" philosophy, EchoTuner leverages Spotify's Web API to create personalized playlists based on audio features like energy, valence, danceability, and more.
 
 **Key Features:**
+
 - **Local-First Approach**: Deploy EchoTuner with your own Spotify Developer credentials - no rate limits, complete privacy, total control
 - **Audio Feature Analysis**: Generate playlists based on sophisticated audio characteristics rather than just genres
 - **Modern Architecture**: Built with a clean separation between frontend and backend, featuring real-time playlist syncing

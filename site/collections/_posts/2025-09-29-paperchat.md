@@ -12,6 +12,7 @@ In an era where AI integration often means sending your data to unknown servers,
 ## The Vision: AI Without Compromise
 
 Most AI-powered applications today require you to trust external services with your data. PaperChat follows the "run it yourself" philosophy, ensuring that:
+
 - **No Rate Limits**: Your API keys, your usage quotas
 - **Complete Privacy**: Player conversations never leave your infrastructure  
 - **Full Control**: Customize AI behavior, system prompts, and response filtering
@@ -38,9 +39,11 @@ src/main/java/lt/domax/paperchat/
 This separation ensures that business logic remains independent of Minecraft-specific implementations, making the codebase maintainable and testable.
 
 ### Multi-Provider AI System
+
 One of PaperChat's key strengths is its extensible AI provider system. The plugin currently supports:
 
 #### Google Gemini
+
 ```java
 @AIProvider("google")
 public class GoogleProvider extends Provider {
@@ -49,6 +52,7 @@ public class GoogleProvider extends Provider {
 ```
 
 #### OpenAI
+
 ```java
 @AIProvider("openai") 
 public class OpenAIProvider extends Provider {
@@ -57,6 +61,7 @@ public class OpenAIProvider extends Provider {
 ```
 
 #### Hack Club AI
+
 ```java
 @AIProvider("hackclub")
 public class HackClubProvider extends Provider {
@@ -65,6 +70,7 @@ public class HackClubProvider extends Provider {
 ```
 
 ### Service Provider Interface (SPI)
+
 The plugin uses Java's SPI pattern for automatic provider registration:
 
 ```
@@ -76,6 +82,7 @@ This design makes adding new AI providers as simple as implementing the abstract
 ## Player Experience
 
 ### Natural Conversation Flow
+
 Players interact with AI through simple commands:
 ```
 /paperchat How can I build a better castle?
@@ -87,7 +94,9 @@ Players interact with AI through simple commands:
 The plugin maintains conversation context per player, enabling meaningful multi-turn conversations that remember previous exchanges.
 
 ### Persistent Session Management
+
 Each player has their own conversation history that persists across sessions:
+
 - Configurable history limits to control memory usage
 - Context-aware responses that reference previous conversations
 - Privacy-focused design where each player's data remains isolated
@@ -95,6 +104,7 @@ Each player has their own conversation history that persists across sessions:
 ## Configuration and Customization
 
 ### Flexible Configuration
+
 PaperChat supports configuration through both environment variables and YAML files:
 
 ```yaml
@@ -113,7 +123,9 @@ chat:
 ```
 
 ### Advanced System Prompts
+
 Server administrators can customize AI behavior through system prompts:
+
 - Define the AI's personality and response style
 - Set context about the Minecraft server and its community
 - Establish guidelines for appropriate responses
@@ -122,6 +134,7 @@ Server administrators can customize AI behavior through system prompts:
 ## Technical Implementation Details
 
 ### Asynchronous Processing
+
 All AI requests are handled asynchronously to maintain server performance:
 
 ```java
@@ -138,14 +151,18 @@ CompletableFuture.supplyAsync(() -> {
 This ensures that AI processing never blocks the main server thread, maintaining smooth gameplay for all players.
 
 ### Error Handling and Recovery
+
 PaperChat includes comprehensive error handling:
+
 - User-friendly error messages that don't expose technical details
 - Automatic retry mechanisms for transient failures
 - Graceful degradation when AI services are unavailable
 - Detailed logging for administrators
 
 ### Security Considerations
+
 The plugin implements several security measures:
+
 - API keys are never logged or exposed to players
 - All AI requests use HTTPS encryption
 - Player data is stored locally only
@@ -155,6 +172,7 @@ The plugin implements several security measures:
 ## Deployment Options
 
 ### Docker Integration
+
 PaperChat ships with complete Docker support:
 
 ```yaml
@@ -174,6 +192,7 @@ services:
 This makes deployment straightforward and ensures consistent environments across different servers.
 
 ### Local Development
+
 For developers wanting to extend or modify PaperChat:
 
 ```bash
@@ -190,6 +209,7 @@ The project includes comprehensive development documentation and follows modern 
 ## Community and Extensibility
 
 ### Adding New Providers
+
 The plugin's architecture makes adding new AI providers straightforward:
 
 1. Implement the abstract `Provider` class
@@ -200,7 +220,9 @@ The plugin's architecture makes adding new AI providers straightforward:
 This design has already enabled community contributions for additional AI services.
 
 ### Plugin Integration
+
 PaperChat is designed to work well with other plugins:
+
 - Respects existing permission systems
 - Integrates with chat formatting plugins
 - Supports multiple worlds and server networks
@@ -209,14 +231,18 @@ PaperChat is designed to work well with other plugins:
 ## Real-World Usage
 
 ### Educational Servers
+
 Many educational Minecraft servers use PaperChat to:
+
 - Provide students with AI tutoring assistance
 - Create immersive storytelling experiences
 - Offer coding help and explanations
 - Support language learning through conversation
 
 ### Community Building
+
 Gaming communities leverage PaperChat for:
+
 - Enhanced roleplay experiences with AI NPCs
 - Creative writing assistance and collaboration
 - Technical support and server guidance
@@ -225,14 +251,18 @@ Gaming communities leverage PaperChat for:
 ## Performance and Scalability
 
 ### Resource Management
+
 PaperChat is designed for efficiency:
+
 - Minimal memory footprint with configurable history limits
 - Asynchronous processing prevents server lag
 - Intelligent caching reduces redundant API calls
 - Graceful handling of rate limits and quotas
 
 ### Monitoring and Analytics
+
 Server administrators can monitor:
+
 - AI usage patterns and popular queries
 - API quota consumption and costs
 - Response times and error rates
@@ -243,25 +273,29 @@ Server administrators can monitor:
 PaperChat demonstrates several important principles for modern software development:
 
 ### Privacy by Design
+
 By requiring self-hosted deployment, the plugin ensures that player data never leaves the server operator's control. This approach could serve as a model for other AI integrations in gaming.
 
 ### Community Ownership
+
 Rather than building a centralized service, PaperChat empowers communities to run their own AI integrations. This creates resilience and prevents vendor lock-in.
 
 ### Transparent Technology
+
 The open-source nature allows communities to understand exactly how their AI integration works, fostering trust and enabling customization.
 
 ## Future Development
 
 The roadmap for PaperChat includes:
+
 - **Enhanced Provider Support**: Integration with more AI services and local models
-- **Advanced Features**: Image analysis, voice integration, and multi-modal AI
-- **Better Integration**: Deeper Minecraft integration with world awareness
+- **Better Integration**: Deeper Minecraft integration with world awareness (building an agentic app)
 - **Community Tools**: Web interface for configuration and monitoring
 
 ## Getting Started
 
 ### Quick Setup
+
 For server administrators:
 
 1. Download PaperChat from [GitHub Releases](https://github.com/domasles/paperchat/releases) or [Modrinth](https://modrinth.com/project/vV2xfFAq)
@@ -271,7 +305,9 @@ For server administrators:
 5. Let players start chatting with AI!
 
 ### For Developers
+
 The plugin serves as an excellent example of:
+
 - Modern Minecraft plugin architecture
 - Clean Java design patterns
 - AI service integration

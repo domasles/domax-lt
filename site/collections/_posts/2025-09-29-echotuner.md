@@ -13,12 +13,10 @@ Spotify's Web API has become increasingly restrictive. As of 2025, building a pu
 
 EchoTuner solves this by embracing the "run it yourself" philosophy. Instead of fighting Spotify's restrictions, it works within them by encouraging local deployment with your own developer credentials.
 
-## What Makes EchoTuner Different
-
-![EchoTuner Architecture](https://echotuner-docs.domax.lt/posts/api-overview)
-
 ### AI-Powered Analysis
+
 EchoTuner doesn't just shuffle songs or rely on basic genre matching. It analyzes audio features like:
+
 - **Energy**: The intensity and power of tracks
 - **Valence**: Musical positivity and happiness
 - **Danceability**: How suitable tracks are for dancing
@@ -28,22 +26,29 @@ EchoTuner doesn't just shuffle songs or rely on basic genre matching. It analyze
 Using these features, the AI creates coherent playlists that flow naturally and match your desired mood or activity.
 
 ### Complete Ownership
+
 When you deploy EchoTuner locally, you get:
+
 - **No Rate Limits**: Your Spotify developer credentials, your rules
 - **Complete Privacy**: Your music data never leaves your infrastructure  
 - **Full Control**: Customize, modify, and extend however you want
 - **No Dependencies**: No external services that can disappear or change terms
 
 ### Modern Architecture
+
 The platform is built with a clean separation of concerns:
+
 - **Frontend**: React-based web interface with real-time updates
 - **Backend**: Node.js API with comprehensive Spotify integration
 - **Database**: Persistent storage for user preferences and playlist history
 - **Docker**: Complete containerized deployment for easy setup
 
+More can be explored at the [EchoTuner Architecture](https://echotuner-docs.domax.lt/posts/api-overview) overview on the official docs.
+
 ## Technical Deep Dive
 
 ### Setup and Configuration
+
 Getting EchoTuner running locally is straightforward:
 
 ```bash
@@ -55,13 +60,16 @@ docker-compose up --build
 ```
 
 The system automatically handles:
+
 - OAuth flow with Spotify
 - User session management
 - Playlist generation and syncing
 - Cross-device functionality (in local deployments)
 
 ### API Integration
+
 EchoTuner's backend provides a comprehensive REST API that handles:
+
 - User authentication and authorization
 - Spotify data fetching and caching
 - AI-powered playlist generation
@@ -70,6 +78,7 @@ EchoTuner's backend provides a comprehensive REST API that handles:
 The API is thoroughly documented and designed for extensibility, making it easy to build additional features or integrate with other services.
 
 ### Playlist Generation Algorithm
+
 The core playlist generation works through several stages:
 
 1. **Seed Analysis**: Analyzes your selected seed tracks for audio features
