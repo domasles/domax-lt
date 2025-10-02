@@ -58,3 +58,6 @@ defaults:
 tag_page_dir: tag
 tag_page_layout: tag_page
 tag_permalink_style: /:title
+
+max_index_projects: 3
+max_index_blogs: 3
