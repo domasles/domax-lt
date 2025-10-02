@@ -2,7 +2,6 @@
   <div class="container">
     <div class="row">
       <div class="c-header__inner">
-
         <div class="logo">
           <a class="logo__link" href="{{ site.baseurl }}/">
             {%if site.data.navigation.logo_image %}
@@ -15,11 +14,9 @@
 
         <nav class="main-nav">
           <div class="main-nav__box">
-
             <div class="nav__icon-close">
               <i class="ion ion-md-close"></i>
             </div>
-
             <div class="nav__title">Menu</div>
               <ul class="nav__list list-reset">
 
@@ -35,7 +32,14 @@
                   </li>
                 {% else %}
                   <li class="nav__item">
-                    <a href="{{ item.url | relative_url }}" class="nav__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
+                    {% assign is_active = false %}
+                    {% if page.url == item.url %}
+                      {% assign is_active = true %}
+                    {% elsif item.url == '/blog/' and page.url contains '/blog/' %}
+                      {% assign is_active = true %}
+                    {% endif %}
+
+                    <a href="{{ item.url | relative_url }}" class="nav__link{% if is_active %} active-link{% endif %}">{{ item.title }}</a>
                   </li>
                 {% endif %}
               {% endfor %}
