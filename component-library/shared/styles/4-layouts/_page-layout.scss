@@ -1,4 +1,4 @@
-/* Page + Post + Project */
+// Page, post and project layouts
 .post-top,
 .page-top {
   padding: 96px 0 48px;
@@ -204,7 +204,7 @@
   }
 }
 
-/* Share */
+// Sharing buttons
 .post__share {
   margin: 32px 0 60px;
 
@@ -281,7 +281,7 @@
   }
 }
 
-/* Post navigation */
+// Navigation between posts
 .post__navigation {
   display: flex;
   justify-content: space-between;
@@ -394,7 +394,7 @@
   }
 }
 
-/* Related posts */
+// Related posts
 .related-posts {
   display: none;
   margin-top: 80px;
@@ -416,7 +416,7 @@
   }
 }
 
-/* Disqus comments */
+// Disqus comments
 .post__comments {
   max-width: 780px;
   margin: 80px auto 40px;
@@ -426,7 +426,7 @@
   }
 }
 
-/* Project */
+// Project page
 .project-subtitle {
   margin: 20px 0 0;
   font-size: 21px;
@@ -439,7 +439,7 @@
   }
 }
 
-/* Project Navigation */
+// Project navigation
 .project__navigation {
   max-width: 780px;
   margin: 80px auto 40px;
@@ -450,20 +450,10 @@
   }
 }
 
-.project__prev {
-  &:hover {
-    color: $text-color;
-
-    .project__nav__title .arrow-right {
-      opacity: 1;
-      transform: translateX(3px);
-    }
-  }
-}
-
 .project__nav__info {
-  display: inline-block;
-  margin: 0 20px 4px 0;
+  display: block;
+  text-align: center;
+  margin: 0 0 4px 0;
   font-size: 12px;
   font-weight: 700;
   line-height: 1.2;
@@ -474,13 +464,10 @@
   margin-bottom: 20px;
   font-size: 40px;
   line-height: 1.2;
-
-  .arrow-right {
-    margin-left: 2px;
-    font-size: 30px;
-    opacity: 0;
-    transition: 0.2s linear;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 
   @media only screen and (max-width: $tablet) {
     font-size: 36px;
