@@ -14,7 +14,8 @@
           {% if include.show_projects %}
             <div class="row">
               {% assign max_projects = site.max_index_projects | default: 3 %}
-              {% for project in site.projects %}
+              {% assign sorted_projects = site.projects | sort: "date" | reverse %}
+              {% for project in sorted_projects %}
                 {% if forloop.index <= max_projects %}
                   {% bookshop project-card project=project %}
                 {% endif %}
