@@ -48,10 +48,12 @@ defaults:
       permalink: /
   - scope:
       type: projects
+      path: ""
     values:
       layout: project
   - scope:
       type: posts
+      path: ""
     values:
       layout: post
 
@@ -61,3 +63,10 @@ tag_permalink_style: /:title
 
 max_index_projects: 3
 max_index_blogs: 3
+
+featured_projects:
+  - Crimson
+  - EchoTuner
+  - PaperChat
+  - NoOS
+  - VECTOR

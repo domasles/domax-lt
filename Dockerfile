@@ -1,9 +1,8 @@
 # DoMax.lt Jekyll Site Dockerfile
-FROM ruby:3.4.6-slim AS jekyll-builder
+FROM ruby:3.4.10-alpine3.24 AS jekyll-builder
 
 # Install dependencies
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends build-essential libffi-dev && rm -rf /var/lib/apt/lists/*
+RUN apk add --no-cache build-base libffi-dev && rm -rf /var/cache/apk/*
 
 # Set up working directory
 WORKDIR /app
@@ -22,7 +21,7 @@ COPY . .
 RUN BUNDLE_GEMFILE=site/Gemfile JEKYLL_ENV=production bundle exec jekyll build --source site --destination /app/_site
 
 # Production stage with Nginx
-FROM nginx:1.29.1-alpine
+FROM nginx:stable-alpine3.23
 
 # Copy Jekyll build
 COPY --from=jekyll-builder /app/_site /usr/share/nginx/html

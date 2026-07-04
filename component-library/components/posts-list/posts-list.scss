@@ -127,6 +127,7 @@
   margin-bottom: 20px;
   color: $text-color;
   overflow-y: hidden;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
 }
