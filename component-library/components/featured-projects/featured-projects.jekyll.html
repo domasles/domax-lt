@@ -1,4 +1,4 @@
-<section class="section projects" id="projects">
+<section class="section featured-projects" id="featured-projects">
   <div class="container">
     <div class="row">
       <div class="col col-12">
@@ -11,12 +11,10 @@
             <div class="section__description">{{ include.description_html }}</div>
           </div>
 
-          {% if include.show_projects %}
+          {% if include.show_projects and site.featured_projects %}
             <div class="row">
-              {% assign max_projects = site.max_index_projects | default: 3 %}
-              {% assign sorted_projects = site.projects | sort: "date" | reverse %}
-              {% for project in sorted_projects %}
-                {% if forloop.index <= max_projects %}
+              {% for project in site.projects %}
+                {% if site.featured_projects contains project.title %}
                   {% bookshop project-card project=project %}
                 {% endif %}
               {% endfor %}

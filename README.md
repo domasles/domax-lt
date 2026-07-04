@@ -1,41 +1,43 @@
-# ![DoMax Logo](DoMaxLogo.png) DoMax.lt - Personal Portfolio & Digital Space
+![DoMax Logo](DoMaxLogo.png)
+
+# DoMax.lt - Personal Portfolio & Digital Space
 
 Welcome to my corner of the internet.
 
-This isn't just a website - it's a template for building professional portfolio sites that you control completely.
-
-Built for developers who believe in owning their digital presence rather than renting it from platforms that come and go.
-
 ## Live Demo
 
-Experience it yourself at [domax.lt](https://domax.lt) - see how ideas translate into reality.
+Experience it yourself at [DoMax.lt](https://domax.lt)!
 
-## The Philosophy Behind DoMax.lt
+## The Philosophy Behind Me And My Nickname DoMax
 
 In a world of constant platform changes and algorithm tweaks, I believe in digital independence. This project embodies:
 
-- **Complete Ownership** - Your content, your design, your rules. No third-party platforms controlling your narrative.
-- **Sustainable Technology** - Built with Jekyll's proven architecture that's been reliably serving sites for over a decade.
-- **Performance First** - Static generation means lightning-fast loading times and rock-solid reliability.
-- **Professional Presentation** - Because your work deserves a platform that matches its quality.
+- **Complete Ownership of the written stuff**
+- **Easy to Deploy Technology** - Built with Jekyll
+- **Performance First**
+- **Professional Presentation**
 
-This isn't just my portfolio - it's a philosophy made code. Take it, make it yours, and own your digital presence.
+The meaning of "DoMax" is simple: "Do" as in action, and "Max" as in maximum. I try to put my best effort into everything I do, and this site is a reflection of that philosophy.
+
+I am all for the idea that source is open. Not only to read, but also edit. So, if you want to fork this and make it your own, go ahead!
 
 ## What Makes This Different
 
 ### Crafted for Real Use
+
 - **Jekyll 4.3.3** with battle-tested reliability
 - **Bookshop Components** for modular design that scales
 - **True Jekyll Pagination** with clean `/blog/page/x` URLs
-- **Responsive Everything** because your audience uses every device imaginable
+- **Responsive Everything** because the audience uses every device imaginable
 
-### Built for Content Creators
-- **Project Showcases** that tell the story behind your work
+### Built for Content Creation
+
+- **Project Showcases** that tell the story
 - **Blog Platform** with proper tagging and pagination
-- **Portfolio Management** designed for professionals
 - **SEO Ready** because visibility matters
 
-### Developer Experience That Doesn't Suck
+### Development Experience That Doesn't Suck
+
 - **Component Architecture** that makes sense
 - **Docker Everything** for consistency across environments
 - **Clean Structure** you can understand and modify
@@ -43,6 +45,7 @@ This isn't just my portfolio - it's a philosophy made code. Take it, make it you
 ## Getting Started
 
 ### Prerequisites
+
 Just Docker. That's it. No Ruby installations, no version conflicts, no "works on my machine" problems.
 
 ### Launch Your Site
@@ -60,56 +63,7 @@ docker compose up --build
 
 3. **Visit `http://localhost:80`** and see your site running.
 
-That's it. Seriously.
-
-### For Local Development
-
-If you prefer working directly with Ruby:
-```bash
-# Install dependencies
-bundle install --gemfile=site/Gemfile
-
-# Serve locally
-cd site && bundle exec jekyll serve
-```
-
-## Making It Yours
-
-### Content Management
-
-#### Adding Blog Posts
-Drop a new file in `site/collections/_posts/`:
-```markdown
----
-title: "Your Brilliant Thoughts"
-date: 2025-09-30 10:00:00 +0300
-image: '/images/your-image.jpg'
-tags: [relevant, tags, here]
----
-
-Write something meaningful...
-```
-
-#### Showcasing Projects
-Add to `site/collections/_projects/`:
-```markdown
----
-title: Amazing Project
-subtitle: What it does
-image: '/images/project-screenshot.jpg'
----
-
-Tell the story of what you built and why it matters...
-```
-
-### Customization
-
-The beauty of owning your platform is complete customization freedom:
-
-- **Components**: Modify any component in `component-library/components/`
-- **Styling**: Global styles in `component-library/shared/styles/`
-- **Layout**: Page templates in `site/_layouts/`
-- **Data**: Site configuration in `site/_data/`
+That's it.
 
 ## How It's Organized
 
@@ -140,6 +94,7 @@ component-library/
 ## Configuration That Makes Sense
 
 ### Jekyll Setup
+
 Key bits in `site/_config.yml`:
 ```yaml
 # Pagination that actually works
@@ -171,6 +126,7 @@ collections:
 ```
 
 ### Docker Magic
+
 The multi-stage build:
 1. **Ruby environment** builds your Jekyll site
 2. **nginx stage** serves it blazingly fast
@@ -180,6 +136,7 @@ All configured for production from day one.
 ## Deployment Options
 
 ### Production Ready
+
 ```bash
 # Build for production
 docker compose up
@@ -205,7 +162,7 @@ docker compose build --no-cache
 - Make sure your blog index page is properly configured
 
 **Want to understand what's happening?**
-Look at the Dockerfile - it's commented and straightforward.
+Look at the Dockerfile - it's made to be straightforward.
 
 ## Technical Foundation
 
@@ -224,6 +181,6 @@ MIT License - Use it, modify it, make it yours. See [LICENSE](LICENSE) for the f
 
 ---
 
-*Built for developers who believe in digital independence and owning their professional presence.*
+*Built for anyone who believes in digital independence and owning their professional presence.*
 
-**Ready to take control of your digital narrative? Clone it, customize it, and make it uniquely yours.**
+*Open source, as intended.*
