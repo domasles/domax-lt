@@ -8,16 +8,16 @@ Welcome to my corner of the internet.
 
 Experience it yourself at [DoMax.lt](https://domax.lt)!
 
-## The Philosophy Behind Me And My Nickname DoMax
+## The Philosophy Behind Me And My Nickname *DoMax*
 
-In a world of constant platform changes and algorithm tweaks, I believe in digital independence. This project embodies:
+In a world of constant right management, I believe in digital independence. This project embodies:
 
 - **Complete Ownership of the written stuff**
-- **Easy to Deploy Technology** - Built with Jekyll
+- **Easy to Deploy Technology with Jekyll**
 - **Performance First**
 - **Professional Presentation**
 
-The meaning of "DoMax" is simple: "Do" as in action, and "Max" as in maximum. I try to put my best effort into everything I do, and this site is a reflection of that philosophy.
+The meaning of ***DoMax*** is simple: ***Do*** as in action, and ***Max*** as in maximum. I try to put my best effort into everything I do, and this site is a reflection of that philosophy.
 
 I am all for the idea that source is open. Not only to read, but also edit. So, if you want to fork this and make it your own, go ahead!
 
@@ -25,7 +25,7 @@ I am all for the idea that source is open. Not only to read, but also edit. So, 
 
 ### Crafted for Real Use
 
-- **Jekyll 4.3.3** with battle-tested reliability
+- **Jekyll** with battle-tested reliability
 - **Bookshop Components** for modular design that scales
 - **True Jekyll Pagination** with clean `/blog/page/x` URLs
 - **Responsive Everything** because the audience uses every device imaginable
@@ -42,13 +42,13 @@ I am all for the idea that source is open. Not only to read, but also edit. So, 
 - **Docker Everything** for consistency across environments
 - **Clean Structure** you can understand and modify
 
-## Getting Started
+## Local Launching
 
 ### Prerequisites
 
 Just Docker. That's it. No Ruby installations, no version conflicts, no "works on my machine" problems.
 
-### Launch Your Site
+### How To Launch The Site
 
 1. **Get the code**:
 ```bash
@@ -56,14 +56,14 @@ git clone https://github.com/domasles/domax-lt.git
 cd domax-lt
 ```
 
-2. **Run it**:
+2. **Run through Docker**:
 ```bash
 docker compose up --build
 ```
 
-3. **Visit `http://localhost:80`** and see your site running.
+3. **Visit `http://localhost:80`** and see it running.
 
-That's it.
+> NOTE: if you want to learn more about customizing, read [CONTRIBUTING.md](CONTRIBUTING.md) for a detailed guide.
 
 ## How It's Organized
 
@@ -91,89 +91,16 @@ component-library/
 └── shared/              # Global styles and utilities
 ```
 
-## Configuration That Makes Sense
-
-### Jekyll Setup
-
-Key bits in `site/_config.yml`:
-```yaml
-# Pagination that actually works
-pagination:
-  enabled: true
-  per_page: 6
-  permalink: '/blog/page/:num/'
-  title: ':title - Page :num'
-  sort_field: 'date'
-  sort_reverse: true
-
-# Bookshop integration
-bookshop_locations:
-  - ../component-library
-
-# Collections
-collections:
-  pages:
-    output: true
-    permalink: /:title/
-  projects:
-    output: true
-    permalink: /project/:slug
-  testimonials:
-    output: false
-  posts:
-    output: true
-    permalink: /blog/:slug
-```
-
-### Docker Magic
-
-The multi-stage build:
-1. **Ruby environment** builds your Jekyll site
-2. **nginx stage** serves it blazingly fast
-
-All configured for production from day one.
-
-## Deployment Options
-
-### Production Ready
-
-```bash
-# Build for production
-docker compose up
-```
-
-The nginx configuration is already optimized for:
-- Static file serving
-- Proper caching headers
-- Security headers
-- GZIP compression
-
-## Troubleshooting
-
-**Build not working?**
-```bash
-# Nuclear option - clean rebuild
-docker compose build --no-cache
-```
-
-**Pagination acting up?**
-- Check that jekyll-paginate is in your Gemfile
-- Verify pagination settings in `_config.yml`
-- Make sure your blog index page is properly configured
-
-**Want to understand what's happening?**
-Look at the Dockerfile - it's made to be straightforward.
-
 ## Technical Foundation
 
 **Built With:**
-- **Jekyll 4.3.3** - The static site generator that just works
+- **Jekyll 4.4.1** - The static site generator that just works
 - **Bookshop** - Component architecture for maintainable development  
-- **SCSS** - Styling that scales with your ambitions
+- **SCSS** - Styling that scales with ambitions
 - **Docker** - Consistent environments everywhere
 - **nginx** - Production-grade web serving
 
-**Philosophy:** Use proven technologies, avoid complexity, own your platform.
+**Philosophy:** Use proven technologies and avoid complexity.
 
 ## License
 

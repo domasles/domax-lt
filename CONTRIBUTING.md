@@ -9,6 +9,13 @@ If you want to take this site as a template and make it your own, here's how to 
 
 ## Content Management
 
+The beauty of owning a platform is complete customization freedom:
+
+- **Components**: Components in `component-library/components/`
+- **Styling**: Global styles in `component-library/shared/styles/`
+- **Layout**: Page templates in `site/_layouts/`
+- **Data**: Site configuration in `site/_data/`
+
 ## Important File Architecture
 
 ```
@@ -72,11 +79,77 @@ featured_projects:
 
 Note that the project names must match the titles of projects within their markdown files.
 
-### Customization
+## Jekyll Setup
 
-The beauty of owning your platform is complete customization freedom:
+Key bits in `site/_config.yml`:
+```yaml
+# Pagination that actually works
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/blog/page/:num/'
+  title: ':title - Page :num'
+  sort_field: 'date'
+  sort_reverse: true
 
-- **Components**: Modify any component in `component-library/components/`
-- **Styling**: Global styles in `component-library/shared/styles/`
-- **Layout**: Page templates in `site/_layouts/`
-- **Data**: Site configuration in `site/_data/`
+# Bookshop integration
+bookshop_locations:
+  - ../component-library
+
+# Collections
+collections:
+  pages:
+    output: true
+    permalink: /:title/
+  projects:
+    output: true
+    permalink: /project/:slug
+  testimonials:
+    output: false
+  posts:
+    output: true
+    permalink: /blog/:slug
+```
+
+## Deployment
+
+### Docker Magic
+
+The multi-stage build:
+1. **Ruby environment** builds your Jekyll site
+2. **nginx stage** serves it blazingly fast
+
+All configured for production from day one.
+To launch the site, run:
+
+```bash
+docker compose up -d
+# append --build if you want to rebuild the image from source.
+# By default, the downloaded image will contain DoMax.lt content.
+```
+
+The nginx configuration is already optimized for:
+- Static file serving
+- Proper caching headers
+- Security headers
+- GZIP compression
+
+## Troubleshooting
+
+**Build not working?**
+```bash
+# Nuclear option - clean rebuild
+docker compose build --no-cache
+```
+
+**Pagination acting up?**
+- Check that jekyll-paginate is within the Gemfile
+- Verify pagination settings in `_config.yml`
+- Make sure blog index pages are properly configured
+
+**Want to understand what's happening?**
+Look at the Dockerfile - it's made to be straightforward.
+
+---
+
+*The rest is in your own hands. Enjoy building your digital space!*
