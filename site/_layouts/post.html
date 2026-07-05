@@ -31,8 +31,7 @@ layout: default
             
             <div class="post__meta-bottom">
               <div class="post__author">{{ site.data.author.author_name }}</div>
-              <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string
-              }}</time>
+              <time class="post__date" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_string }}</time>
             </div>
           </div>
           
@@ -54,15 +53,27 @@ layout: default
 </div>
 
 <div class="container">
-  <div class="row">
-    <div class="col col-10 col-d-12 push-d-0 push-1">
+  <div class="row justify-content-center" style="display: flex; justify-content: center;">
+    <div class="col col-12" style="max-width: 1000px; width: 100%; margin: 0 auto;">
       {% include post-navigation.html %}
     </div>
   </div>
 </div>
 
-{% include related-posts.html %}
+<div class="container">
+  <div class="row justify-content-center" style="display: flex; justify-content: center;">
+    <div class="col col-12">
+      {% include related-posts.html %}
+    </div>
+  </div>
+</div>
 
 {% if site.data.general_settings.disqus-identifier %}
-  {% include disqus-comments.html %}
+  <div class="container">
+    <div class="row justify-content-center" style="display: flex; justify-content: center;">
+      <div class="col col-12">
+        {% include disqus-comments.html %}
+      </div>
+    </div>
+  </div>
 {% endif %}

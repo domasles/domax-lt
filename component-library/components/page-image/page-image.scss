@@ -1,17 +1,14 @@
-.c-page-image {	
+.c-page-image {
   position: relative;
   margin-bottom: 48px;
   border-radius: 16px;
   overflow: hidden;
-  background: $blue-gray;
   width: 100%; 
 
   img {
     display: block; 
     width: 100%;
-    height: auto; 
-    min-height: 280px; 
-    object-fit: contain; 
+    height: auto;
     user-select: none;
   }
 
