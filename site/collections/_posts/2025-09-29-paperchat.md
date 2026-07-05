@@ -2,7 +2,7 @@
 title: "PaperChat: Bringing AI Conversations to Minecraft with Privacy and Control"
 date: 2025-09-29 10:02:00 +0300
 image: '/images/posts/paperchat.png'
-tags: [Java, AI, Plugin, PaperMC, FOSS]
+tags: [Java, AI, Plugin, PaperMC]
 ---
 
 # PaperChat - Quick Gateway to AI in Minecraft

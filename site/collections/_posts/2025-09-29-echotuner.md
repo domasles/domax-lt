@@ -2,7 +2,7 @@
 title: "EchoTuner: Building an AI-Powered Playlist Generator That You Own"
 date: 2025-09-29 10:00:00 +0300
 image: '/images/posts/echotuner.png'
-tags: [AI, Music, Docker, Website]
+tags: [AI, Music, Docker, Python, Website]
 ---
 
 # EchoTuner - Playlist Generation at Your Fingertips
