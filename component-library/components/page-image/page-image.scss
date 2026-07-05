@@ -1,25 +1,21 @@
 .c-page-image {	
   position: relative;
-  transform: translate(0);
-  padding-top: 56.25%;
   margin-bottom: 48px;
-  min-height: 280px;
   border-radius: 16px;
   overflow: hidden;
   background: $blue-gray;
+  width: 100%; 
 
   img {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: block; 
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; 
+    min-height: 280px; 
+    object-fit: contain; 
     user-select: none;
   }
 
   @media only screen and (max-width: $desktop) {
-    padding-top: 65%;
     margin-bottom: 40px;
   }
 

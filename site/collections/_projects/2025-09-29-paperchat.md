@@ -2,7 +2,7 @@
 date: 2025-09-29 10:02:00 +0300
 title: PaperChat
 subtitle: AI-Powered Minecraft Plugin
-image: '/images/paperchat.png'
+image: '/images/posts/paperchat.png'
 comments: true
 ---
 

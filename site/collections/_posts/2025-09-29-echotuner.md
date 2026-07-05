@@ -1,9 +1,11 @@
 ---
 title: "EchoTuner: Building an AI-Powered Playlist Generator That You Own"
 date: 2025-09-29 10:00:00 +0300
-image: '/images/echotuner.png'
-tags: [AI, Music, Spotify, Docker, FOSS]
+image: '/images/posts/echotuner.png'
+tags: [AI, Music, Docker, Website]
 ---
+
+# EchoTuner - Playlist Generation at Your Fingertips
 
 In a world where centralized services control our digital experiences, [EchoTuner](https://github.com/domasles/echotuner) takes a different approach: it's an AI-powered playlist generation platform that you own and control completely.
 
