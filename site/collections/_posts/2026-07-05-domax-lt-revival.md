@@ -27,6 +27,6 @@ Yes, the site is getting an upgrade alongside the content. While the visual iden
 
 ## The Ultimate Dev Log
 
-Everything is officially back on track. My goal is for **DoMax.lt** to become my ultimate centralized database - a place to archive everything I build, share raw technical thoughts, and track my growth as a developer. 
+Everything is officially back on track. My goal is for **DoMax.lt** to become my ultimate centralized database - a place to archive everything I build, share raw technical thoughts, and track my growth as a developer. From now on, the devlogs will become more human and more about the experience rather than only showing raw details. I will not modify the old content just for the sake of archiving and viewing how much I change as a person in the long run, and the difference should be obvious.
 
 Thanks for stopping by, and stay tuned for the breakdown of my recent builds!
