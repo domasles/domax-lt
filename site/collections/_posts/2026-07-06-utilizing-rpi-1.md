@@ -11,8 +11,6 @@ Raspberry Pi 1 is a single-board computer that was released in 2012. It was a re
 
 ## What Are The True Specs of Raspberry Pi 1?
 
-They are as follows:
-
 | Feature | Specification |
 | --- | --- |
 | RAM | 512MB |
