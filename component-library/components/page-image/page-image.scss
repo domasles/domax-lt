@@ -3,10 +3,11 @@
   margin-bottom: 48px;
   border-radius: 16px;
   overflow: hidden;
-  width: 100%; 
+  width: 100%;
+  background: $blue-gray;
 
   img {
-    display: block; 
+    display: block;
     width: 100%;
     height: auto;
     user-select: none;

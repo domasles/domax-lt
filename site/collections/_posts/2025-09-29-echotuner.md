@@ -5,6 +5,10 @@ image: '/images/posts/echotuner.png'
 tags: [AI, Music, Docker, Python, Website]
 ---
 
+# EchoTuner Is Deprecated
+
+Read more at [The rise and fall of EchoTuner](/blog/echotuner-deprecation).
+
 # EchoTuner - Playlist Generation at Your Fingertips
 
 In a world where centralized services control our digital experiences, [EchoTuner](https://github.com/domasles/echotuner) takes a different approach: it's an AI-powered playlist generation platform that you own and control completely.

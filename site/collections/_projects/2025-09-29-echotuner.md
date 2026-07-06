@@ -6,6 +6,8 @@ image: '/images/posts/echotuner.png'
 comments: true
 ---
 
+> EchoTuner Is Deprecated. Read more at [The rise and fall of EchoTuner](/blog/echotuner-deprecation).
+
 EchoTuner is an open-source, AI-powered playlist generation platform designed for music enthusiasts who want complete control over their Spotify experience. Built with the "run it yourself" philosophy, EchoTuner leverages Spotify's Web API to create personalized playlists based on audio features like energy, valence, danceability, and more.
 
 **Key Features:**

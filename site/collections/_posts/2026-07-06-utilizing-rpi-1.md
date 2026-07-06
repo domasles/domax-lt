@@ -1,6 +1,6 @@
 ---
 title: "Raspberry Pi 1: was it really THAT weak?"
-date: 2026-07-05 10:01:00 +0300
+date: 2026-07-06 10:00:00 +0300
 image: '/images/posts/rpi-1.png'
 tags: [Linux, Python, Raspberry Pi, Hardware]
 ---
