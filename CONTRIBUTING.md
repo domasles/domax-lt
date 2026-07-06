@@ -103,7 +103,7 @@ collections:
     permalink: /:title/
   projects:
     output: true
-    permalink: /project/:slug
+    permalink: /projects/:slug
   testimonials:
     output: false
   posts:

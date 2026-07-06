@@ -9,7 +9,7 @@ tags: [AI, Music, Docker, Python, Website]
 
 EchoTuner was a project I started in 2025. It was an AI-powered playlist generator that you could run locally, giving you complete control over your music data and playlists. The idea was to create a tool that could give you a playlist only **for you**.
 
-You might have already read about it's launch [here](/blog/echotuner) or [there](/project/echotuner). It was a project that I was very proud of, and I put a lot of work into it.
+You might have already read about it's launch [here](/blog/echotuner) or [there](/projects/echotuner). It was a project that I was very proud of, and I put a lot of work into it.
 
 While a master server has been launched for quite some time now, with an app reachable at [echotuner.domax.lt](https://echotuner.domax.lt), the project has been officially deprecated.
 

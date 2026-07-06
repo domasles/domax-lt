@@ -4,7 +4,7 @@
       <div class="c-header__inner">
         <div class="logo">
           <a class="logo__link" href="{{ site.baseurl }}/">
-            {%if site.data.navigation.logo_image %}
+            {% if site.data.navigation.logo_image %}
                 <img class="logo__image" src="{{ site.baseurl }}{{ site.data.navigation.logo_image }}" alt="{{ site.data.general_settings.title }}">
             {% else %}
                 {{ site.data.settings.title }}
@@ -35,7 +35,7 @@
                     {% assign is_active = false %}
                     {% if page.url == item.url %}
                       {% assign is_active = true %}
-                    {% elsif item.url == '/blog/' and page.url contains '/blog/' %}
+                    {% elsif item.url != '/' and page.url contains item.url %}
                       {% assign is_active = true %}
                     {% endif %}
 
