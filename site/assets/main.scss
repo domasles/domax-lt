@@ -2,3 +2,7 @@
 ---
 
 {% bookshop_scss %}
+
+html, body {
+    color-scheme: only light !important;
+}
