@@ -13,6 +13,10 @@ exclude:
   - postcss.config.js
   - node_modules
 
+sass:
+  silence_deprecations:
+    - import
+
 pagination:
   enabled: true
   per_page: 6

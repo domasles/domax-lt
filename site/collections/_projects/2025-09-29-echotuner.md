@@ -3,7 +3,6 @@ date: 2025-09-29 10:00:00 +0300
 title: EchoTuner
 subtitle: AI-Powered Playlist Generation
 image: '/images/posts/echotuner.png'
-comments: true
 ---
 
 > EchoTuner Is Deprecated. Read more at [The rise and fall of EchoTuner](/blog/echotuner-deprecation).

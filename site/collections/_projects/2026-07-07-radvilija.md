@@ -3,7 +3,6 @@ date: 2025-07-07 10:00:00 +0300
 title: Radvilija
 subtitle: Student Listing Website
 image: '/images/posts/radvilija.png'
-comments: true
 ---
 
 Radvilija is a website I made with my friends for our school. It was a student listing website where students could exchange stuff they no longer needed, creating a sustainable and friendly relationship between students.
