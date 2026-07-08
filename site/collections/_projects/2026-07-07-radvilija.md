@@ -1,5 +1,5 @@
 ---
-date: 2025-07-07 10:00:00 +0300
+date: 2026-07-07 10:00:00 +0300
 title: Radvilija
 subtitle: Student Listing Website
 image: '/images/posts/radvilija.png'

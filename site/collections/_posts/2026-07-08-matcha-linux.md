@@ -1,6 +1,6 @@
 ---
 title: "Matcha Linux: fresh look with fresh performance"
-date: 2026-07-08 10:00:00 +0300
+date: 2026-07-08 10:02:00 +0300
 image: '/images/posts/matcha-linux.png'
 tags: [Linux, OS, Software, Optimization]
 ---

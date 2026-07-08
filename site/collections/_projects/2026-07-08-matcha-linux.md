@@ -1,5 +1,5 @@
 ---
-date: 2025-07-08 10:00:00 +0300
+date: 2026-07-08 10:02:00 +0300
 title: Matcha Linux
 subtitle: Lightweight Linux distribution
 image: '/images/posts/matcha-linux.png'
