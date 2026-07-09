@@ -68,5 +68,6 @@ tag_permalink_style: /:title
 max_index_blogs: 3
 
 featured_projects:
+  - Onlinja
   - Matcha Linux
   - SkyLink
